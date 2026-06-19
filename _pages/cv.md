@@ -3,7 +3,6 @@ layout: page
 title: Curriculum Vitae
 permalink: /cv/
 ---
-<div style="margin-left: 2cm;">
   
 # Curriculum Vitae
 
