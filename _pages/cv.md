@@ -3,7 +3,8 @@ layout: page
 title: Curriculum Vitae
 permalink: /cv/
 ---
-
+<div align="center">
+  
 # Curriculum Vitae
 
 ## Cara Ellen Appel
