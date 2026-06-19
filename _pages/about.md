@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-# About Me
-
 Hello and welcome! 👋
 
 I'm **Cara Appel**, a Solution Architect at **BWI GmbH** and a recent graduate of the **M.Sc. Cyber Security Management** program at FOM University of Applied Sciences. My research interests lie at the intersection of **Artificial Intelligence, Software Engineering, Security, and Requirements Engineering**, with a particular focus on building **secure, trustworthy, and practical AI systems**.
