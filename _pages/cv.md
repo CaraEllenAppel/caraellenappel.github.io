@@ -3,6 +3,8 @@ layout: page
 title: Curriculum Vitae
 permalink: /cv/
 ---
+<div style="max-width: 900px; margin-left: auto; margin-right: auto;">
+
   
 # Curriculum Vitae
 
@@ -263,3 +265,5 @@ April 2026
 ---
 
 _Last updated: June 2026_
+
+</div>
