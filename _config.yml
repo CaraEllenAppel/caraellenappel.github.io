@@ -24,13 +24,13 @@ repository               : "CaraEllenAppel/caraellenappel.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  name             : "Cara Ellen Appel"
+  pronouns         : "she/her"  
+  bio              : "M.Sc. Cyber Security Management | Solution Architect @ BWI GmbH | Research"
   location         : "Wingst, Germany"
   employer         : "BWI GmbH"
   uri              : # URL
-  email            : "cara.appel@web.de" 
+  email            : "contact@caraellenappel.net" 
 
   # Academic websites
   academia         : # URL
@@ -90,6 +90,8 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+  data: 
+    title: 'Data'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
