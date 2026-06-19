@@ -23,7 +23,7 @@ repository               : "CaraEllenAppel/caraellenappel.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Cara Ellen Appel"
   pronouns         : "she/her"  
   bio              : "M.Sc. Cyber Security Management | Solution Architect @ BWI GmbH | Research"
