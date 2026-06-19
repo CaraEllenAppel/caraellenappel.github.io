@@ -1,14 +1,13 @@
 ---
-title: "Paper Title Number 1"
+title: "Expanding ML-Documentation for Better Security"
 collection: publications
-category: manuscripts
-permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
-paperurl: 'https://academicpages.github.io/files/paper1.pdf'
-bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+category: conferences 
+permalink: /publication/2025-09-01-Expanding_ML_Documentation_for_Better_Security
+excerpt: 'This article presents the current state of ML-security and of the documentation of ML-based systems, models and datasets in research and practice based on an extensive review of the existing literature. It shows a generally low awareness of security aspects among ML-practitioners and organizations and an often unstandardized approach to documentation, leading to overall low quality of ML-documentation. Existing standards are not regularly adopted in practice and IT-security aspects are often not included in documentation.Due to these factors, there is a clear need for improved security documentation in ML, as one step towards addressing the existing gaps in ML-security. To achieve this, we propose expanding existing documentation standards for ML-documentation to include a security section with specific security relevant information. Implementing this, a novel expanded method of documenting security requirements in ML-documentation is presented, based on the existing Model Cards and Datasheets for Datasets standards, but with the recommendation to adopt these findings in all ML-documentation.'
+date: 2025-09-01
+venue: '2025 IEEE 33rd International Requirements Engineering Conference Workshops (REW)'
+slidesurl: 'files/slides_2025_ExpandingMLDocumentationForBetterSecurity.pdf'
+paperurl: '[https://doi.ieeecomputersociety.org/10.1109/REW66121.2025.00041]'
+citation: 'Appel, Cara Ellen. (2025). "Expanding ML-Documentation for Better Security" in 2025 IEEE 33rd International Requirements Engineering Conference Workshops (REW), Valencia, Spain, 2025, pp. 275-282, doi: 10.1109/REW66121.2025.00041.'
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
