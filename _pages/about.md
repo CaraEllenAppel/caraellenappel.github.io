@@ -6,11 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
----
-layout: page
-title: About
-permalink: /about/
----
 
 # About Me
 
