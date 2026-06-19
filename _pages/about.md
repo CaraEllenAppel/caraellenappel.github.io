@@ -184,4 +184,10 @@ I am particularly interested in:
 
 ---
 
+## 🙋‍♀️ Personal 
+
+Together with my husband and our cats I live in a small town about an hour outside of beautiful Hamburg in northern Germany. In my free time, I enjoy reading, hiking, knitting and knitwear design and embroidery, as well as playing the piano, violin and singing.
+
+---
+
 > *"Building trustworthy AI requires trustworthy software engineering."*
