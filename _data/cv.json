@@ -1,152 +1,247 @@
 {
-  "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
-    "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
-    },
-    "profiles": [
-      {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
-      },
-      {
-        "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
-      }
-    ]
+  "personal_information": {
+    "name": "Cara Ellen Appel",
+    "current_position": "Solution Architect - BWI GmbH",
+    "email": "cara.appel@web.de",
+    "phone": "+49 174 934 6084",
+    "location": "Wingst, Germany",
+    "orcid": "0009-0006-8113-428X",
+    "github": "https://github.com/CaraEllenAppel"
   },
-  "work": [],
+
+  "research_interests": [
+    "AI Safety and Security",
+    "Software Engineering",
+    "Machine Learning and AI",
+    "Requirements Engineering"
+  ],
+
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "degree": "Master of Science",
+      "field": "Cyber Security Management",
+      "institution": "FOM University of Applied Sciences",
+      "location": "Essen, Germany",
+      "start_date": "2024-09",
+      "end_date": "2026-06",
+      "advisor": "Dr. Kai Brüssau",
+      "thesis": {
+        "title": "Towards a New Taxonomy of Reusable Requirements for the Security, Safety and Privacy of Machine Learning Systems",
+        "status": "Extended into publication"
+      },
+      "additional_activities": [
+        "International Program: Summer Conference Iceland (2025)",
+        "Evaluation Commission for Degree Programs (2025–2026)"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "degree": "Bachelor of Education",
+      "field": "Informatics and Music",
+      "institution": "University of Hamburg & University of Music and Theater Hamburg",
+      "location": "Hamburg, Germany",
+      "start_date": "2019-10",
+      "end_date": "2025-01",
+      "advisor": "Prof. Dr. Walid Maalej",
+      "thesis": {
+        "title": "A Study of IT-Security Aspects in Machine Learning Documentation"
+      },
+      "additional_activities": [
+        "Quality Circle Teaching (2023–2025)",
+        "University Quality Management Commission (2022–2025)"
+      ]
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
+
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "type": "conference",
+      "year": 2025,
+      "authors": [
+        "Appel, C. E."
+      ],
+      "title": "Expanding ML Documentation for Better Security",
+      "venue": "IEEE 33rd International Requirements Engineering Conference Workshops (REW)",
+      "doi": "10.1109/REW66121.2025.00041"
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "type": "dataset",
+      "year": 2026,
+      "authors": [
+        "Vorhölter, K.",
+        "et al."
+      ],
+      "title": "Eine fächerintegrierende Unterrichtsreihe für den MINT-Unterricht aus dem Projekt 'Nachhaltig handeln - MINT4all'",
+      "doi": "10.5281/zenodo.15646929",
+      "url": "https://zenodo.org/records/15646929"
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "type": "submitted",
+      "year": 2026,
+      "authors": [
+        "Appel, C. E.",
+        "Kai Brüssau"
+      ],
+      "title": "RE-cycling: A Taxonomy of Reusable Requirements for Safety, Security and Privacy in ML Systems",
+      "venue": "AISec'26 Workshop co-located with ACM CCS 2026",
+      "status": "Submitted"
     }
   ],
-  "presentations": [
+
+  "conference_presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "year": 2025,
+      "conference": "IEEE REW 2025",
+      "title": "Expanding ML Documentation for Better Security"
     }
   ],
-  "teaching": [
+
+  "research_projects": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "title": "Towards a New Taxonomy of Reusable Requirements for the Security, Safety and Privacy of Machine Learning Systems",
+      "type": "Master Thesis",
+      "period": "2025-2026",
+      "description": [
+        "Developed a taxonomy of reusable requirements for ML systems.",
+        "Applied requirements engineering methods to safe, secure and private AI.",
+        "Conducted systematic literature analysis."
+      ]
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "title": "A Study of IT-Security Aspects in Machine Learning Documentation",
+      "type": "Bachelor Thesis",
+      "period": "2024-2025",
+      "description": [
+        "Investigated security-related information in ML documentation.",
+        "Proposed extensions to ML documentation practices.",
+        "Results published at IEEE REW 2025."
+      ]
+    },
+    {
+      "title": "MINT4all Research Project",
+      "type": "Student Research Assistant",
+      "institution": "University of Hamburg",
+      "period": "2023-present",
+      "description": [
+        "Empirical studies",
+        "Structured interviews",
+        "Qualitative data analysis with MaxQDA",
+        "Literature reviews",
+        "Educational material development"
+      ]
     }
   ],
-  "portfolio": [
+
+  "professional_experience": [
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "position": "Solution Architect",
+      "organization": "BWI GmbH",
+      "location": "Hamburg, Germany",
+      "period": "2024-present",
+      "responsibilities": [
+        "AI readiness initiatives",
+        "Requirements engineering",
+        "Risk analysis",
+        "Business continuity management",
+        "Long-term solution development"
+      ]
+    },
+    {
+      "position": "Student Research Assistant",
+      "organization": "University of Hamburg",
+      "period": "2023-present",
+      "responsibilities": [
+        "Qualitative research",
+        "Structured interviews",
+        "MaxQDA analysis",
+        "Research support",
+        "Teaching material development"
+      ]
+    },
+    {
+      "position": "Private Tutor",
+      "organization": "Self-employed",
+      "period": "2016-present",
+      "responsibilities": [
+        "Tutoring mathematics",
+        "Tutoring computer science",
+        "Tutoring chemistry",
+        "Tutoring music"
+      ]
+    },
+    {
+      "position": "Teaching Assistant",
+      "organization": "Gymnasium Warstade",
+      "period": "2021-2024",
+      "responsibilities": [
+        "Teaching computer science",
+        "Teaching music"
+      ]
     }
-  ]
+  ],
+
+  "technical_skills": {
+    "programming_languages": [
+      "Python",
+      "Java"
+    ],
+
+    "machine_learning": [
+      "PyTorch",
+      "Scikit-Learn",
+      "XGBoost"
+    ],
+
+    "software_engineering": [
+      "Requirements Engineering",
+      "UML",
+      "Model-Based Engineering",
+      "Testing Methodologies",
+      "Git"
+    ],
+
+    "cybersecurity": [
+      "Risk Analysis",
+      "Threat Modeling",
+      "Security Requirements Engineering",
+      "Privacy Engineering",
+      "Business Continuity Management",
+      "Business Impact Analysis"
+    ],
+
+    "research_methods": [
+      "Systematic Literature Reviews",
+      "Qualitative Research",
+      "Structured Interviews",
+      "MaxQDA",
+      "Taxonomy Development"
+    ]
+  },
+
+  "certifications": [
+    {
+      "name": "Certified Professional for Requirements Engineering",
+      "issuer": "Certible",
+      "date": "2026-04"
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "German",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "C2"
+    },
+    {
+      "language": "Estonian",
+      "level": "B1"
+    }
+  ],
+
+  "profiles": {
+    "orcid": "https://orcid.org/0009-0006-8113-428X",
+    "github": "https://github.com/CaraEllenAppel"
+  }
 }
