@@ -41,3 +41,27 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    background: var(--global-bg-color, #fff);
+    z-index: 1000;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Reserve space for the fixed sidebar — padding on the parent is more robust
+     with centered containers than margin-left on the inner container */
+  #main {
+    padding-left: 320px; /* sidebar width + gap */
+  }
+
+  /* Ensure the inner container doesn’t add extra offsets */
+  #main > .container {
+    margin-left: 0;
+    min-width: 0;
+  }
+}
