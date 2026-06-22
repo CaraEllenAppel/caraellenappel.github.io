@@ -42,32 +42,42 @@
     "vendor/font-awesome/brands"
 ;
 
-@media screen and (min-width: 900px) {
+/* Sidebar override variables (keeps values in one place for easy tweaks) */
+$sidebar-width: 360px;
+$sidebar-gap: 20px;
+$sidebar-inner-padding: 1.25rem;
+$sidebar-breakpoint: 900px;
+
+/* ---- Sidebar override (placed after imports so it has priority) ---- */
+@media screen and (min-width: $sidebar-breakpoint) {
   .sidebar {
     box-sizing: border-box;
-    width: 360px;
+    width: $sidebar-width;
     position: fixed;
     top: 0;
     left: 0;
     padding-top: $masthead-height;
+    padding-left: $sidebar-inner-padding;
+    padding-right: $sidebar-inner-padding;
+    padding-bottom: $sidebar-inner-padding;
     background: var(--global-bg-color, #fff);
     z-index: 1000;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
   }
 
-  /* Force inner spacing on direct children (catches full-bleed children) */
+  /* Apply inner spacing on direct children (catches full-bleed children) */
   .sidebar > * {
     box-sizing: border-box;
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-    padding-bottom: 1.25rem !important;
-    margin-left: 0 !important;
-    width: auto !important;
+    padding-left: $sidebar-inner-padding;
+    padding-right: $sidebar-inner-padding;
+    padding-bottom: $sidebar-inner-padding;
+    margin-left: 0;
+    width: auto;
   }
 
   /* Reserve space for the fixed sidebar: sidebar width + gap */
   #main {
-    padding-left: 380px; /* 360px sidebar + 20px gap; adjust gap if desired */
+    padding-left: $sidebar-width + $sidebar-gap; /* sidebar width + gap */
   }
 
   #main > .container {
