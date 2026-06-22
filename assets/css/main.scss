@@ -48,18 +48,21 @@
     top: 0;
     left: 0;
     width: 360px;
+    box-sizing: border-box;
+    padding-top: $masthead-height;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.25rem;
     background: var(--global-bg-color, #fff);
     z-index: 1000;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
   }
 
-  /* Reserve space for the fixed sidebar — padding on the parent is more robust
-     with centered containers than margin-left on the inner container */
+  /* reserve space for the fixed sidebar: sidebar width + gap */
   #main {
-    padding-left: 320px; /* sidebar width + gap */
+    padding-left: 380px; /* 360px sidebar + 20px gap; adjust gap as desired */
   }
 
-  /* Ensure the inner container doesn’t add extra offsets */
   #main > .container {
     margin-left: 0;
     min-width: 0;
