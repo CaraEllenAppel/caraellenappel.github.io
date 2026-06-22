@@ -73,3 +73,24 @@ $sidebar-breakpoint: 900px;
     margin-left: 0;
   }
 }
+
+/* CV page: ensure content clears the left sidebar */
+@media screen and (min-width: 900px) {
+  .cv-layout #main > .container,
+  .layout--cv #main > .container,
+  .page--cv #main > .container {
+    margin-left: calc(320px + 24px) !important; /* sidebar width + gap */
+    min-width: 0;
+  }
+
+  .cv-layout .page,
+  .layout--cv .page,
+  .page--cv .page,
+  .cv-layout .page__content,
+  .layout--cv .page__content,
+  .page--cv .page__content {
+    clear: none !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
