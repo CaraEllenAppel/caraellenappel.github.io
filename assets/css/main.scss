@@ -1,66 +1,131 @@
-/* Sidebar override variables (keeps values in one place for easy tweaks) */
+---
+---
+
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+
+@import
+    "vendor/breakpoint/breakpoint",
+
+    "themes",
+    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+
+    "include/mixins",
+    "vendor/susy/susy",
+
+    "layout/reset",
+    "layout/base",
+
+    "include/utilities",
+    "layout/tables",
+    "layout/buttons",
+    "layout/notices",
+    "layout/masthead",
+    "layout/navigation",
+    "layout/footer",
+    "syntax",
+
+    "layout/forms",
+
+    "layout/page",
+    "layout/archive",
+    "layout/sidebar",
+    "layout/json_cv",
+
+    "vendor/font-awesome/fontawesome",
+    "vendor/font-awesome/solid",
+    "vendor/font-awesome/brands"
+;
+
+/* Sidebar/layout override variables */
 $sidebar-width: 360px;
 $sidebar-gap: 20px;
 $sidebar-inner-padding: 1.25rem;
 $sidebar-breakpoint: 900px;
 
-/* ---- Sidebar override (placed after imports so it has priority) ---- */
-@media screen and (min-width: $sidebar-breakpoint) {
-  .sidebar {
-    box-sizing: border-box;
-    width: $sidebar-width;
-    /* make the sidebar non-fixed so it behaves like other pages */
-    position: relative;
-    float: left;
-    left: auto;
-    padding-top: 0;
-    padding-left: $sidebar-inner-padding;
-    padding-right: $sidebar-inner-padding;
-    padding-bottom: $sidebar-inner-padding;
-    background: var(--global-bg-color, #fff);
-    z-index: 1000;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-    margin-right: $sidebar-gap; /* gap between sidebar and content */
-  }
-
-  /* Apply inner spacing on direct children (catches full-bleed children) */
-  .sidebar {
-  box-sizing: border-box;
-  width: $sidebar-width;
-  /* keep sidebar in normal flow so content can sit next to it */
-  position: relative;
-  float: left;
-  top: 0;
-  left: auto;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: $sidebar-inner-padding;
-  padding-right: $sidebar-inner-padding;
-  padding-bottom: $sidebar-inner-padding;
-  background: var(--global-bg-color, #fff);
-  z-index: 1000;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-  margin-right: $sidebar-gap; /* gap between sidebar and content */
-}
-
-  /* Remove reserved space for fixed sidebar behavior site-wide */
+/* ---- Mobile-safe base (below breakpoint) ---- */
+@media screen and (max-width: ($sidebar-breakpoint - 1px)) {
   #main {
+    display: block;
     padding-left: 0 !important;
   }
 
-  /* Ensure page content flows next to floated sidebar on all subpages */
-  #main > .container,
-  #main .page,
-  #main .archive {
-    margin-left: 0;
-    min-width: 0;
-    overflow: hidden;
+  .sidebar {
+    position: static;
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    box-sizing: border-box;
+    padding: $sidebar-inner-padding;
+    background: var(--global-bg-color, #fff);
+    box-shadow: none;
   }
 
-  /* Clear floated sidebar so footer doesn't overlap */
-  #main::after {
-    content: "";
-    display: table;
-    clear: both;
+  .sidebar > * {
+    box-sizing: border-box;
+    width: auto;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  #main > .container,
+  #main .page,
+  #main .archive,
+  #main .page__inner-wrap,
+  #main .page__content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    min-width: 0;
+  }
+}
+
+/* ---- Desktop/tablet wide: fixed 2-column layout ---- */
+@media screen and (min-width: $sidebar-breakpoint) {
+  #main {
+    display: grid;
+    grid-template-columns: $sidebar-width minmax(0, 1fr);
+    column-gap: $sidebar-gap;
+    align-items: start;
+    padding-left: 0 !important;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 1rem; /* adjust to 0 if you want it flush under masthead */
+    float: none;
+    width: auto;
+    margin: 0;
+    box-sizing: border-box;
+    padding: $sidebar-inner-padding;
+    background: var(--global-bg-color, #fff);
+    z-index: 10;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    align-self: start;
+  }
+
+  .sidebar > * {
+    box-sizing: border-box;
+    width: auto;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  #main > .container,
+  #main .page,
+  #main .archive,
+  #main .page__inner-wrap,
+  #main .page__content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    min-width: 0;
   }
 }
