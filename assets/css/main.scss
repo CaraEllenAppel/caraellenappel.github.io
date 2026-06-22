@@ -42,21 +42,24 @@
     "vendor/font-awesome/brands"
 ;
 
-/* conservative sidebar tweaks only */
+/* Sidebar override variables */
 $sidebar-width: 360px;
 $sidebar-gap: 20px;
 $sidebar-inner-padding: 1.25rem;
 $sidebar-breakpoint: 900px;
 
+/* Desktop: keep sidebar on LEFT, content on RIGHT */
 @media screen and (min-width: $sidebar-breakpoint) {
   .sidebar {
     box-sizing: border-box;
     width: $sidebar-width;
     position: relative;
-    float: left;
-    top: 0; /* critical: remove large vertical offset */
-    left: auto;
+    float: left;   /* sidebar left */
+    top: 0;
+    left: 0;
     margin-top: 0;
+    margin-right: $sidebar-gap; /* gap to content on right */
+    margin-left: 0;
     padding-top: 0;
     padding-left: $sidebar-inner-padding;
     padding-right: $sidebar-inner-padding;
@@ -64,7 +67,6 @@ $sidebar-breakpoint: 900px;
     background: var(--global-bg-color, #fff);
     z-index: 1000;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-    margin-right: $sidebar-gap;
   }
 
   .sidebar > * {
@@ -73,13 +75,48 @@ $sidebar-breakpoint: 900px;
     width: auto;
   }
 
-  /* apply to all pages, not just CV */
+  /* Important: apply globally, not only CV */
+  #main {
+    padding-left: 0 !important;
+  }
+
+  /* Content column should not be pushed below the float */
+  #main > .container {
+    margin-left: 0 !important;
+    min-width: 0;
+    overflow: hidden; /* establishes block formatting context beside float */
+  }
+
+  /* Prevent old float clears from forcing content below sidebar */
+  .page,
+  .archive {
+    clear: none !important;
+  }
+}
+
+/* Mobile/tablet: stack naturally */
+@media screen and (max-width: ($sidebar-breakpoint - 1px)) {
+  .sidebar {
+    float: none;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   #main {
     padding-left: 0 !important;
   }
 
   #main > .container {
-    margin-left: 0;
-    min-width: 0;
+    overflow: visible;
+  }
+
+  .page,
+  .archive {
+    clear: both;
   }
 }
