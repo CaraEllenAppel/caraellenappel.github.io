@@ -12,7 +12,6 @@ $sidebar-breakpoint: 900px;
     /* make the sidebar non-fixed so it behaves like other pages */
     position: relative;
     float: left;
-    top: 100px;
     left: auto;
     padding-top: 0;
     padding-left: $sidebar-inner-padding;
