@@ -1,17 +1,17 @@
-.collapse-container {
+.container {
     width: 100%;
     border: 1px solid #d3d3d3;
 }
-.collapse-container div {
+.container div {
     width: 100%;
 }
-.collapse-container .header {
+.container .header {
     background-color: #d3d3d3;
     padding: 2px;
     cursor: pointer;
     font-weight: bold;
 }
-.collapse-container .content {
+.container .content {
     display: none;
     padding: 5px;
 }
