@@ -398,23 +398,3 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
-
-
-/* Tighten content grid for cv-layout pages so content sits next to sidebar */
-.cv-layout {
-  .page {
-    @include breakpoint($large) {
-      @include span(9 of 12 last); /* narrower main column */
-      @include prefix(0 of 12);    /* no extra left prefix */
-      @include suffix(1 of 12);    /* small suffix to keep right gutter */
-    }
-  }
-  .page__inner-wrap {
-    /* ensure floated sidebar + content clear correctly */
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  }
-}
