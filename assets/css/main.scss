@@ -75,8 +75,9 @@ $sidebar-breakpoint: 900px;
     width: auto;
   }
 
-  /* Reserve space for the fixed sidebar: sidebar width + gap */
-  #main {
+  /* Reserve space for the fixed sidebar: sidebar width + gap
+     Only apply the offset on pages that use the cv layout so other pages are not shifted. */
+  .cv-layout #main {
     padding-left: $sidebar-width + $sidebar-gap; /* sidebar width + gap */
   }
 
