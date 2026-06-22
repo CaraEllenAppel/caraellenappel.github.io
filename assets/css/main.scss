@@ -88,12 +88,3 @@ $sidebar-breakpoint: 900px;
     min-width: 0;
   }
 }
-
-/* DEBUG: outline page content to verify content is present and visible */
-.page__content {
-  outline: 3px solid rgba(255,0,0,0.45) !important;
-  background: rgba(255,0,0,0.02) !important;
-  display: block !important;
-  visibility: visible !important;
-  margin-left: 0 !important;
-}
