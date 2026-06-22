@@ -42,90 +42,44 @@
     "vendor/font-awesome/brands"
 ;
 
-/* Sidebar/layout override variables */
+/* conservative sidebar tweaks only */
 $sidebar-width: 360px;
 $sidebar-gap: 20px;
 $sidebar-inner-padding: 1.25rem;
 $sidebar-breakpoint: 900px;
 
-/* ---- Mobile-safe base (below breakpoint) ---- */
-@media screen and (max-width: ($sidebar-breakpoint - 1px)) {
-  #main {
-    display: block;
-    padding-left: 0 !important;
-  }
-
-  .sidebar {
-    position: static;
-    float: none;
-    width: 100%;
-    margin: 0 0 1rem 0;
-    box-sizing: border-box;
-    padding: $sidebar-inner-padding;
-    background: var(--global-bg-color, #fff);
-    box-shadow: none;
-  }
-
-  .sidebar > * {
-    box-sizing: border-box;
-    width: auto;
-    margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-  }
-
-  #main > .container,
-  #main .page,
-  #main .archive,
-  #main .page__inner-wrap,
-  #main .page__content {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    min-width: 0;
-  }
-}
-
-/* ---- Desktop/tablet wide: fixed 2-column layout ---- */
 @media screen and (min-width: $sidebar-breakpoint) {
-  #main {
-    display: grid;
-    grid-template-columns: $sidebar-width minmax(0, 1fr);
-    column-gap: $sidebar-gap;
-    align-items: start;
-    padding-left: 0 !important;
-  }
-
   .sidebar {
-    position: sticky;
-    top: 1rem; /* adjust to 0 if you want it flush under masthead */
-    float: none;
-    width: auto;
-    margin: 0;
     box-sizing: border-box;
-    padding: $sidebar-inner-padding;
+    width: $sidebar-width;
+    position: relative;
+    float: left;
+    top: 0; /* critical: remove large vertical offset */
+    left: auto;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: $sidebar-inner-padding;
+    padding-right: $sidebar-inner-padding;
+    padding-bottom: $sidebar-inner-padding;
     background: var(--global-bg-color, #fff);
-    z-index: 10;
+    z-index: 1000;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
-    align-self: start;
+    margin-right: $sidebar-gap;
   }
 
   .sidebar > * {
     box-sizing: border-box;
-    width: auto;
     margin-left: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
+    width: auto;
   }
 
-  #main > .container,
-  #main .page,
-  #main .archive,
-  #main .page__inner-wrap,
-  #main .page__content {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+  /* apply to all pages, not just CV */
+  #main {
+    padding-left: 0 !important;
+  }
+
+  #main > .container {
+    margin-left: 0;
     min-width: 0;
   }
 }
