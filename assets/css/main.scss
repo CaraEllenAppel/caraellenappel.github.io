@@ -42,57 +42,63 @@
     "vendor/font-awesome/brands"
 ;
 
-/* Sidebar/layout overrides */
+/* ===== Layout fix: sidebar left + content aligned ===== */
 $sidebar-width: 320px;
 $sidebar-gap: 24px;
 $sidebar-breakpoint: 900px;
 
-/* Desktop: sidebar left, content right */
 @media screen and (min-width: $sidebar-breakpoint) {
-  #main {
-    padding-left: 0 !important;
-  }
-
+  /* Sidebar pinned on left */
   #main .sidebar,
   .layout--single .sidebar,
   .sidebar.sticky {
     float: left !important;
-    clear: left !important;
     width: $sidebar-width !important;
     max-width: $sidebar-width !important;
-    margin: 0 $sidebar-gap 0 0 !important;
+    margin: 0 !important;
     position: relative !important;
     top: 0 !important;
     left: 0 !important;
-    transform: none !important;
+    clear: none !important;
   }
 
-  /* Content sits beside the floated sidebar */
-  #main > .container,
+  /* Force content wrapper to start to the right of sidebar */
+  #main > .container {
+    margin-left: calc(#{$sidebar-width} + #{$sidebar-gap}) !important;
+    padding-top: 0 !important;
+    min-width: 0 !important;
+  }
+
+  /* Remove vertical push + left-shift on page content */
   #main .page,
   #main .archive,
   #main .page__inner-wrap,
   #main .page__content,
   #main .list__item {
     clear: none !important;
-    overflow: hidden !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
-    min-width: 0;
+  }
+
+  /* Disable any old reserved sidebar spacing system-wide */
+  #main {
+    padding-left: 0 !important;
   }
 }
 
-/* Mobile: normal stacked flow */
 @media screen and (max-width: ($sidebar-breakpoint - 1px)) {
   #main .sidebar,
   .layout--single .sidebar,
   .sidebar.sticky {
     float: none !important;
-    clear: both !important;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 1rem 0 !important;
     position: static !important;
-    transform: none !important;
+  }
+
+  #main > .container {
+    margin-left: 0 !important;
+    padding-top: 0 !important;
   }
 }
