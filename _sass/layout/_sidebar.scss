@@ -330,10 +330,3 @@
     }
   }
 }
-
-@media screen and (min-width: $sidebar-screen-min-width) {
-  #main > .container {
-    margin-left: 320px; /* should be sidebar width + gap (300 + 20) */
-    min-width: 0;       /* important to prevent flex/content overflow */
-  }
-}
