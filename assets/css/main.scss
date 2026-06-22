@@ -42,63 +42,34 @@
     "vendor/font-awesome/brands"
 ;
 
-/* ===== Layout fix: sidebar left + content aligned ===== */
+/* === Minimal sidebar/content override === */
 $sidebar-width: 320px;
 $sidebar-gap: 24px;
 $sidebar-breakpoint: 900px;
 
 @media screen and (min-width: $sidebar-breakpoint) {
-  /* Sidebar pinned on left */
-  #main .sidebar,
-  .layout--single .sidebar,
-  .sidebar.sticky {
-    float: left !important;
-    width: $sidebar-width !important;
-    max-width: $sidebar-width !important;
-    margin: 0 !important;
-    position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    clear: none !important;
+  /* Sidebar stays left */
+  .sidebar {
+    float: left;
+    width: $sidebar-width;
+    margin-right: $sidebar-gap;
+    margin-left: 0;
+    top: 0;
   }
 
-  /* Force content wrapper to start to the right of sidebar */
+  /* Let main content sit beside sidebar (not below it) */
+  .page,
+  .archive,
+  .page__inner-wrap,
+  .page__content,
+  .list__item {
+    clear: none;
+  }
+
+  /* Ensure no extra left reservation from old fixed-sidebar behavior */
+  #main,
   #main > .container {
-    margin-left: calc(#{$sidebar-width} + #{$sidebar-gap}) !important;
-    padding-top: 0 !important;
-    min-width: 0 !important;
-  }
-
-  /* Remove vertical push + left-shift on page content */
-  #main .page,
-  #main .archive,
-  #main .page__inner-wrap,
-  #main .page__content,
-  #main .list__item {
-    clear: none !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-
-  /* Disable any old reserved sidebar spacing system-wide */
-  #main {
-    padding-left: 0 !important;
-  }
-}
-
-@media screen and (max-width: ($sidebar-breakpoint - 1px)) {
-  #main .sidebar,
-  .layout--single .sidebar,
-  .sidebar.sticky {
-    float: none !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 0 1rem 0 !important;
-    position: static !important;
-  }
-
-  #main > .container {
-    margin-left: 0 !important;
-    padding-top: 0 !important;
+    padding-left: 0;
+    margin-left: 0;
   }
 }
