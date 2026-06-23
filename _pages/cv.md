@@ -5,9 +5,6 @@ permalink: /cv/
 author_profile: true
 ---
 
-  
-# Curriculum Vitae
-
 ## Cara Ellen Appel
 
 **Solution Architect – BWI GmbH**
