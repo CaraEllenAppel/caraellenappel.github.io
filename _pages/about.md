@@ -72,7 +72,7 @@ DOI: https://doi.org/10.1109/REW66121.2025.00041
 
 with Dr. Kai Brüssau
 
-Submitted to **AISec'26**, co-located with **ACM CCS 2026**.
+submission planned to **AISec'26**, co-located with **ACM CCS 2026**.
 
 ---
 
